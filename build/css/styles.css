@@ -1,3 +1,7 @@
+@font-face {
+  font-family: squiggly;
+  src: url("squigglyasta.ttf") format("truetype"); }
+
 meta.foundation-version {
   font-family: "/5.5.3/"; }
 
@@ -56,7 +60,7 @@ body {
 
 body {
   background: #fff;
-  color: #222;
+  color: #fff;
   cursor: auto;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-style: normal;
@@ -2655,8 +2659,8 @@ p {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  color: #f3f333;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  color: #F69220;
+  font-family: squiggly;
   font-style: normal;
   font-weight: normal;
   line-height: 1.4;
@@ -2664,7 +2668,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.2rem;
   text-rendering: optimizeLegibility; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-    color: #f7f77a;
+    color: #f9b86e;
     font-size: 60%;
     line-height: 0; }
 
@@ -2688,7 +2692,7 @@ h6 {
 
 .subheader {
   line-height: 1.4;
-  color: #f7f77a;
+  color: #f9b86e;
   font-weight: normal;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem; }
@@ -2789,7 +2793,7 @@ abbr,
 acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #222;
+  color: #fff;
   cursor: help; }
 
 abbr {
@@ -2805,17 +2809,17 @@ blockquote {
   blockquote cite {
     display: block;
     font-size: 0.8125rem;
-    color: #f6f662; }
+    color: #f8ab53; }
     blockquote cite:before {
       content: "\2014 \0020"; }
     blockquote cite a,
     blockquote cite a:visited {
-      color: #f6f662; }
+      color: #f8ab53; }
 
 blockquote,
 blockquote p {
   line-height: 1.6;
-  color: #f7f77a; }
+  color: #f9b86e; }
 
 /* Microformats */
 .vcard {

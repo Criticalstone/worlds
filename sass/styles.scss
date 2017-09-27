@@ -1,7 +1,18 @@
+@font-face {
+    font-family: squiggly;
+    src: url("squigglyasta.ttf") format("truetype");
+}
+
+$dark-color: #3f3f3f;
+$po-pink: #DF5DA1;
+$po-orange: #F69220;
+$header-font-color: $po-orange;
+$header-font-family: squiggly;
+$body-font-color: #fff;
+
+
 @import "partials/settings";
 @import "partials/foundation";
-
-$dark-color: #59cdda;
 
 body {
     background: $dark-color;

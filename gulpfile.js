@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var sequence = require('run-sequence');
 var connect = require('gulp-connect');
 var panini = require('panini');
+var rimraf = require('rimraf');
 
 gulp.task('connect', function() {
     connect.server({
@@ -20,7 +21,16 @@ gulp.task('pages', function() {
       helpers: 'src/helpers/',
       data: 'src/data/'
     }))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('build'))
+    .on('finish', function(){
+        gulp.run('livereload');
+    });
+});
+
+gulp.task('pages:reset', function(done) {
+  panini.refresh();
+  gulp.run('pages');
+  done();
 });
 
 gulp.task('sass', function(){
@@ -29,17 +39,18 @@ gulp.task('sass', function(){
         .pipe(gulp.dest('./build/css'));
 });
 
-gulp.task('livereload', function() {
-    sequence('sass', 'pages', 'reload'); 
-});
+// gulp.task('livereload', function() {
+//     sequence('sass', 'pages', 'reloads'); 
+// });
 
-gulp.task('reload', function() {
-    gulp.src('./build/**/*').pipe(connect.reload())
+gulp.task('livereload', function() {
+    gulp.src('./build/**/*').pipe(connect.reload());
 })
 
 gulp.task('watch', function() {
     gulp.watch('./sass/**/*.scss', ['livereload']);
-    gulp.watch('./src/**/*', ['livereload']);
+    gulp.watch('./src/pages/**/*', ['pages']);
+    gulp.watch(['src/{layouts,partials,pages}/**/*'], ['pages:reset']);
 });
 
 gulp.task('default', ['pages', 'connect', 'watch', 'sass']);
