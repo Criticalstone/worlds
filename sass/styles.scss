@@ -1,14 +1,20 @@
 @font-face {
     font-family: squiggly;
-    src: url("squigglyasta.ttf") format("truetype");
+    src: url("../squigglyasta.ttf") format("truetype");
 }
 
 $dark-color: #3f3f3f;
+$black: #000;
 $po-pink: #DF5DA1;
 $po-orange: #F69220;
 $header-font-color: $po-orange;
 $header-font-family: squiggly;
 $body-font-color: #fff;
+
+$button-font-med: rem-calc(100);
+$button-font-tny: rem-calc(100);
+$button-font-sml: rem-calc(100);
+$button-font-lrg: 2rem;
 
 
 @import "partials/settings";
@@ -16,4 +22,61 @@ $body-font-color: #fff;
 
 body {
     background: $dark-color;
+}
+
+.pink {
+    color: $po-pink;
+}
+
+.orange {
+    color: $po-orange;
+}
+
+.small-header {
+    font-size: 2rem;
+    font-family: $header-font-family;    
+}
+
+.large-header {
+    font-size: 3rem;
+    font-family: $header-font-family;    
+}
+
+.main-header {
+    font-weight: bold;
+    font-size: 5rem;
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.2);;
+}
+
+.main-div {
+    // background: linear-gradient(rgba(0,0,0,0), $dark-color), url("../img/14.jpg") no-repeat;
+    background: url("../img/3.jpg") no-repeat;
+    height: 100vh;
+    width: 100vw;
+    max-width: 99vw;
+    margin: 0 0 0 0;
+    position: relative;
+}
+
+.main-div * {
+    padding: 3rem;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 30px;
+}
+
+.bottom-right {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+.logo {
+    max-height: 30vh;
+}
+
+.button {
+    margin-right: 1rem;
 }
