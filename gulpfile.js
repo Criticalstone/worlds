@@ -36,21 +36,34 @@ gulp.task('pages:reset', function(done) {
 gulp.task('sass', function(){
     return gulp.src('./sass/**/*.scss')
         .pipe(sass( { errLogToConsole: true }))
-        .pipe(gulp.dest('./build/css'));
+        .pipe(gulp.dest('./build/css'))
+        .on('finish', livereloadaoe);
 });
 
-// gulp.task('livereload', function() {
-//     sequence('sass', 'pages', 'reloads'); 
-// });
+gulp.task('js', function(){
+    return gulp.src(['./bower_components/foundation/js/foundation/foundation.js', './bower_components/foundation/js/foundation/foundation.magellan.js', './bower_components/jquery/dist/jquery.js'])
+        .pipe(gulp.dest('./build/js'))
+        .on('finish', livereloadaoe);
+});
+
+function livereloadaoe() {
+    gulp.run('livereload');
+}
+
+gulp.task('assets', function() {
+    return gulp.src('./src/assets/**/*')
+        .pipe(gulp.dest('./build/'));
+});
 
 gulp.task('livereload', function() {
     gulp.src('./build/**/*').pipe(connect.reload());
 })
 
 gulp.task('watch', function() {
-    gulp.watch('./sass/**/*.scss', ['livereload']);
+    gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./src/pages/**/*', ['pages']);
     gulp.watch(['src/{layouts,partials,pages}/**/*'], ['pages:reset']);
+    gulp.watch('./assets/**/*', ['assets']);
 });
 
-gulp.task('default', ['pages', 'connect', 'watch', 'sass']);
+gulp.task('default', ['pages', 'connect', 'watch', 'sass', 'js', 'assets']);
