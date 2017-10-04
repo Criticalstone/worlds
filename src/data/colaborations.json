@@ -1,10 +1,18 @@
 {
     "fl": {
-        "logo": "http://via.placeholder.com/200x200",
+        "logo": "/img/fl-red-big.png",
         "link": "http://femalelegends.com"
     },
-    "inet": {
-        "logo": "http://via.placeholder.com/200x200",
-        "link": "https://inet.se"
+    "draken": {
+        "logo": "/img/draken-fixed.png",
+        "link": "#"
+    },
+    "rainbow": {
+        "logo": "/img/regnbagshjarta.png",
+        "link": "http://fritidicentrum.goteborg.se/"
+    },
+    "fic": {
+        "logo": "/img/fic.jpeg",
+        "link": "http://fritidicentrum.goteborg.se/"
     }
 }
