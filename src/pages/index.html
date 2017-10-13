@@ -30,16 +30,21 @@ price: "Gratis"
 <br>
 
 <div class="row">
-    <div class="small-12">
+    <div class="small-10 small-offset-1 large-12 large-offset-0">
         <h2 class="text-center">Aktiviteter</h2>
         {{#each activities}}
             <div class="row">
                 <div class="small-3 columns">
-                    <img src="{{this.img}}"/>
+                    <a href="{{this.link}}"><img src="{{this.img}}"/></a>
                 </div>
                 <div class="small-9 columns">
-                    <h3>{{this.name}}</h3>
+                    <a href="{{this.link}}"><h3>{{this.name}}</h3></a>
                     <p>{{this.description}}</p>
+                    {{#ifequal this.haslink true}}
+                        <p>{{this.linkdesc}}<a href="{{this.link}}">{{this.link}}</a></p>
+                    {{else}}
+                        
+                    {{/ifequal}}
                 </div>
             </div>
             <br>
@@ -50,9 +55,11 @@ price: "Gratis"
 
 <br>
 <div class="row">   
-    <h2 class="text-center">Var?</h2>
-    <p>Draken är den perfekta lokalen för ett evenemang som detta, en biograf med plats för ca. 700 personer, konferensrum som lämpar sig för både workshops och föreläsningar
-        Biografen ligger nära Järntorget, se karta nedan för en närmare bild och vägbeskrivning.</p>
+    <div class="small-10 small-offset-1 large-12 large-offset-0">
+        <h2 class="text-center">Var?</h2>
+        <p>Draken är den perfekta lokalen för ett evenemang som detta, en biograf med plats för ca. 700 personer, konferensrum som lämpar sig för både workshops och föreläsningar
+            Biografen ligger nära Järntorget, se karta nedan för en närmare bild och vägbeskrivning.</p>
+    </div>
     <iframe
         width="100%"
         height="450"
@@ -65,10 +72,12 @@ price: "Gratis"
 
 <br>
 <div class="row">
-    <h2 class="text-center">Samarbeten</h2>
-    {{#each colaborations}}
-        <a href="{{this.link}}"><img class="fullwidth columns small-3" src="{{this.logo}}"/></a>
-    {{/each}}
+    <div class="small-10 small-offset-1 large-12 large-offset-0">
+        <h2 class="text-center">Samarbeten</h2>
+        {{#each colaborations}}
+            <a href="{{this.link}}"><img class="fullwidth columns small-3" src="{{this.logo}}"/></a>
+        {{/each}}
+    </div>
 </div>
 <br>
 
