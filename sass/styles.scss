@@ -5,6 +5,7 @@
 
 $dark-color: #3f3f3f;
 $black: #000;
+$white: #fff;
 $po-pink: #DF5DA1;
 $po-orange: #F69220;
 $header-font-color: $po-orange;
@@ -14,7 +15,8 @@ $body-font-color: #fff;
 $button-font-med: rem-calc(100);
 $button-font-tny: rem-calc(100);
 $button-font-sml: rem-calc(100);
-$button-font-lrg: 2rem;
+$button-font-lrg: 3rem;
+$button-font-family: squiggly;
 
 
 @import "partials/settings";
@@ -50,10 +52,10 @@ body {
 
 .main-div {
     // background: linear-gradient(rgba(0,0,0,0), $dark-color), url("../img/14.jpg") no-repeat;
-    background: url("../img/3.jpg") no-repeat;
+    background: url("../img/viewing-party.jpg") no-repeat;
     height: 100vh;
     width: 100vw;
-    max-width: 99vw;
+    max-width: 100%;
     margin: 0 0 0 0;
     position: relative;
 }
@@ -67,9 +69,21 @@ body {
     bottom: 30px;
 }
 
+.scroll-down {
+    position: absolute;
+    bottom: 10px;
+    height: 3rem;
+    padding: 0px;
+}
+.scroll-down h3 {
+    color: $white;
+    padding: 0px;
+    font-size: 3rem;
+}
+
 .bottom-right {
     position: absolute;
-    right: 30px;
+    right: 0px;
     bottom: 30px;
 }
 
@@ -78,5 +92,10 @@ body {
 }
 
 .button {
-    margin-right: 1rem;
+    margin-left: 1rem;
+    height: 5rem;
+    line-height: 3.5rem;
+    border-radius: 5px;
+    padding: 0px;
+    margin-bottom: 0px;
 }
