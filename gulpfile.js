@@ -41,7 +41,7 @@ gulp.task('sass', function(){
 });
 
 gulp.task('js', function(){
-    return gulp.src(['./bower_components/foundation/js/foundation/foundation.js', './bower_components/foundation/js/foundation/foundation.magellan.js', './bower_components/jquery/dist/jquery.js'])
+    return gulp.src(['./src/js/*.js', './bower_components/foundation/js/foundation/foundation.js', './bower_components/foundation/js/foundation/foundation.magellan.js', './bower_components/jquery/dist/jquery.js', './bower_components/jquery-countdown/build/jquery.countdown.js'])
         .pipe(gulp.dest('./build/js'))
         .on('finish', livereloadaoe);
 });
@@ -64,6 +64,7 @@ gulp.task('build', function() {
 })
 
 gulp.task('watch', function() {
+    gulp.watch('./src/js/*.js', ['js']);
     gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./src/pages/**/*', ['pages']);
     gulp.watch(['src/{layouts,partials,pages}/**/*'], ['pages:reset']);
