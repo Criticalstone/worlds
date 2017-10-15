@@ -14,6 +14,11 @@
     "description": "Under lördagseftermiddagen kommer en cosplay-workshop äga rum där vi blir guidade av Micha som har stor erfarenhet från Cosplay. Hon kommer visa oss olika tekniker, material och även ha med sig olika props som stavar, svärd, pilbåge med mera. Hon kommer även prata om olika inriktningar inom cosplay och vad hon har valt att fokusera på. Deltagarna får under workshopen möjlighet att ställa frågor och fördjupa sin kunskap om Cosplay.",
     "img": "/img/cosplay.png"
   },
+  "panel": {
+    "name": "Programmerings panel",
+    "description": "Träffa personer som jobbar med programmering och ställ frågor om hur det är att jobba inom IT-branschen",
+    "img": "/img/code-all.jpg"
+  },
   "parents": {
     "name": "'Bara 5 minuter till...' - En workhop för föräldrar om e-sport och näthat",
     "description": "Föreningarna Pink Orange och Female Legends arrangerar en workshop om e-sport, näthat och andra viktiga delar inom e-spelsvärlden för att skapa en större och bredare förståelse för e-sporten. Workshopen bygger på Respect all Competes böcker ”Svensk e-sports Code of Conduct” och ”Föräldrar och E-sport”. Lördag 4 november klockan 12:00 på Biografen Draken Göteborg Heurlins Plats 15. Vi möts i entrén och håller på till senast klockan 15. Lättare lunch ingår. Workshopen är kostnadsfri.",
