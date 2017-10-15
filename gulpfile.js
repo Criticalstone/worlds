@@ -59,6 +59,10 @@ gulp.task('livereload', function() {
     gulp.src('./build/**/*').pipe(connect.reload());
 })
 
+gulp.task('build', function() {
+    gulp.run(['pages', 'sass', 'js', 'assets'])
+})
+
 gulp.task('watch', function() {
     gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./src/pages/**/*', ['pages']);
