@@ -1,18 +1,48 @@
 {
-    "fl": {
-        "logo": "/img/fl-red-white.png",
-        "link": "http://femalelegends.com"
+    "row1": {
+        "fl": {
+            "logo": "/img/fl-red-white.png",
+            "link": "http://femalelegends.com"
+        },
+        "draken": {
+            "logo": "/img/draken-2.jpg",
+            "link": "#"
+        },
+        "rainbow": {
+            "logo": "/img/regnbagshjarta.png",
+            "link": "http://fritidicentrum.goteborg.se/"
+        },
+        "fic": {
+            "logo": "/img/fic.jpeg",
+            "link": "http://fritidicentrum.goteborg.se/"
+        }
     },
-    "draken": {
-        "logo": "/img/draken-2.jpg",
-        "link": "#"
+    "row2":{
+        "bethesda": {
+            "logo": "/img/bethesda.jpg",
+            "link": "http://bethesda.net/"
+        },
+        "imageform": {
+            "logo": "/img/imageform.png",
+            "link": "http://imageform.se/"
+        },
+        "ghost": {
+            "logo": "/img/ghost.svg",
+            "link": "http://ghostgames.com/"
+        },
+        "inet": {
+            "logo": "/img/inet.png",
+            "link": "http://inet.se/"
+        }
     },
-    "rainbow": {
-        "logo": "/img/regnbagshjarta.png",
-        "link": "http://fritidicentrum.goteborg.se/"
-    },
-    "fic": {
-        "logo": "/img/fic.jpeg",
-        "link": "http://fritidicentrum.goteborg.se/"
+    "row3": {
+        "skygoblin": {
+            "logo": "/img/skygoblin.png",
+            "link": "http://skygoblin.com/"
+        },
+        "zoink": {
+            "logo": "/img/zoink.png",
+            "link": "http://zoinkgames.com/"
+        }
     }
 }

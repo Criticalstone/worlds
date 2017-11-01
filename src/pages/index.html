@@ -79,7 +79,12 @@ price: "Gratis"
     <div class="small-10 small-offset-1 large-12 large-offset-0">
         <h2 class="text-center">Samarbeten</h2>
         {{#each colaborations}}
-            <a href="{{this.link}}"><img class="fullwidth columns small-3" src="{{this.logo}}"/></a>
+            <div class="row">
+            {{#each this}}
+                <a href="{{this.link}}"><img class="fullwidth columns small-3" src="{{this.logo}}"/></a>
+            {{/each}}
+            </div>
+            <br>
         {{/each}}
     </div>
 </div>
